@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-	conn, err := net.Dial("tcp", "localhost:8000")
+	ip, port := "192.168.3.7", "8000"
+	conn, err := net.Dial("tcp", ip+":"+port)
 	if err != nil {
 		fmt.Println("Error connecting to server:", err)
 		os.Exit(1)

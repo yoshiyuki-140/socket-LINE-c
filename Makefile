@@ -17,10 +17,10 @@ all: build
 build: $(SERVER_BIN) $(CLIENT_BIN)
 
 $(SERVER_BIN): $(SERVER_SRC)
-    go build -o $(SERVER_BIN) $(SERVER_SRC)
+    CGO_ENABLED=0 go build -o $(SERVER_BIN) $(SERVER_SRC)
 
 $(CLIENT_BIN): $(CLIENT_SRC)
-    go build -o $(CLIENT_BIN) $(CLIENT_SRC)
+    CGO_ENABLED=0 go build -o $(CLIENT_BIN) $(CLIENT_SRC)
 
 # クリーンターゲット
 clean:
