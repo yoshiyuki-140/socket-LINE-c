@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	ip, port := "192.168.3.7", "8000"
+	ip, port := "192.168.3.7", "8000" // ここは自宅のラズパイサーバーのポート番号に適宜変更
 	conn, err := net.Dial("tcp", ip+":"+port)
 	if err != nil {
 		fmt.Println("Error connecting to server:", err)
